@@ -3,13 +3,15 @@ def second_challenge
    dairy: ["milk", "yogurt", "cheese"],
    vegetable: ["carrots", "broccoli", "cucumbers"],
    meat: ["chicken", "steak", "salmon"],
-   grains: {bob: ["rice", "pasta"]}
+   grains: ["rice", "pasta"]
   }
 
   #code your solution here!
   result = []
-  
-  
-  return groceries.values
+  groceries.each do |key, value|
+    result << value
+    
+  end
+  return result.flatten
 
 end
